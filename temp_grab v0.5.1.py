@@ -9,8 +9,8 @@
 
 from bs4 import BeautifulSoup as bs
 import requests
-import csv
 import re
+#import csv
 
 ##Uncomment following section if arguments are to be entered
 ##while running the program. Enter City, followed by Country
@@ -45,14 +45,10 @@ while i<13:                                                                 ##lo
     match = soup.find_all('script', type="text/javascript")[3].text.strip() #fourth data value in the Beautiful Soup Object
     finalString=finalString+','+re.findall('(?<=\[).+?(?=\])',match)[0]     #regex to find everything between the first [] brackets
     i += 1
-    
 
-##Removing Characters which dont matter. Also, Formatting the text output.
+FormattedString=finalString.replace('},{','\n').replace(',{','').replace('}','').replace(',"temp":','\t').replace('"date":','') ##Removing Characters which dont matter. Also, Formatting the text output.
 
-FormattedString=finalString.replace('},{','\n').replace(',{','').replace('}','').replace(',"temp":','\t').replace('"date":','')
 filename=City+" "+Year+".txt"
 file=open(filename, "w+")
 file.write(FormattedString)
 file.close()
-
-##=((((LEFT(A1,10) & "." & RIGHT(A1,3))/60)/60)/24)+DATE(1970,1,1)
