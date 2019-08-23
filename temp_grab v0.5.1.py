@@ -46,11 +46,13 @@ while i<13:                                                                 ##lo
     finalString=finalString+','+re.findall('(?<=\[).+?(?=\])',match)[0]     #regex to find everything between the first [] brackets
     i += 1
     
+
+##Removing Characters which dont matter. Also, Formatting the text output.
+
+FormattedString=finalString.replace('},{','\n').replace(',{','').replace('}','').replace(',"temp":','\t').replace('"date":','')
 filename=City+" "+Year+".txt"
 file=open(filename, "w+")
-file.write(finalString)
+file.write(FormattedString)
 file.close()
-print("Data Extraction Completed for",City,Year)
-input("Press Enter Key to exit")
 
 ##=((((LEFT(A1,10) & "." & RIGHT(A1,3))/60)/60)/24)+DATE(1970,1,1)
