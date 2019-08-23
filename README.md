@@ -13,6 +13,6 @@ Libraries to install for python: Beautifulsoup4 , Requests, lxml, csv
 ## Usage Steps:
 
 1. Run Python script and enter the city and country and year
-2. Run Notepad++ Macro 
-3. Paste data into excel file and drag formula
+2. Run Notepad++ Macro on the text file
+3. Paste data into Excel file and drag formula
 4. Voila!
