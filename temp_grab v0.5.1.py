@@ -1,7 +1,7 @@
 ##This script downloads data from https://www.timeanddate.com/
 ##for the entire year from January to December in TXT Format
 ##And Saves in a text file in the same folder. Parsed CSV WIP
-##This script is valid only for 2016, 2017 and 2018.
+##This script is valid only for years for which data is available on the website.
 ##City, Country are to be entered in lower case only.
 ##Check City and Country spellings from https://www.timeanddate.com/weather/india/bangalore/historic
 ##And then go to text box for selecting city
@@ -29,7 +29,7 @@ if Country.isdigit():
 if City.isdigit():
     print("City Entered is not Valid. Exiting...")
     exit()
-if not(Year.isdigit() and int(Year)>2015 and int(Year)<2019):
+if not(Year.isdigit() and int(Year)>2000 and int(Year)<2019):
     print("Year Entered is not within range or invalid. Exiting...")
     exit()
 print("Proceeding with data extraction for", City,",",Country, Year)
