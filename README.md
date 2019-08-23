@@ -14,5 +14,5 @@ Libraries to install for python: Beautifulsoup4 , Requests, lxml, csv
 
 1. Run Python script and enter the city and country and year
 2. Copy Text from generated file
-3. Paste data into Excel file Cell B2 and drag formula
+3. Paste data into Excel file Cell B2 and drag formula in D2 and E2
 4. Voila!
