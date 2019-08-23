@@ -1,4 +1,4 @@
-##        
+## Paste this as a new macro in C:\Users\%username%\AppData\Roaming\Notepad++\shortcuts.xml
         
         <Macro name="TemperatureGrabber" Ctrl="no" Alt="no" Shift="no" Key="0">
             <Action type="3" message="1700" wParam="0" lParam="0" sParam="" />
