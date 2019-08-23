@@ -1,11 +1,12 @@
-##This script downloads data from https://www.timeanddate.com/
-##for the entire year from January to December in TXT Format
+##This script downloads temperature data from https://www.timeanddate.com/
+##for the entire year from January to December in TXT Format.
+##The script returns °C or °F based on country you are running this script from (based on website)
 ##And Saves in a text file in the same folder. Parsed CSV WIP
 ##This script is valid only for years for which data is available on the website.
 ##City, Country are to be entered in lower case only.
 ##Check City and Country spellings from https://www.timeanddate.com/weather/india/bangalore/historic
 ##And then go to text box for selecting city
-## Libraries to install: Beautifulsoup4 , Requests, lxml, csv
+##Libraries to install: Beautifulsoup4 , Requests, lxml, csv
 
 from bs4 import BeautifulSoup as bs
 import requests
