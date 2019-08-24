@@ -13,7 +13,7 @@ import requests
 import re
 #import csv
 
-##Uncomment following section if arguments are to be entered
+##Uncomment following section if arguments are to be supported
 ##while running the program. Enter City, followed by Country
 ##and then the year. e.g temp_grab.py bangalore india 2018
 ##print ("Proceeding with data extraction for", sys.argv[1], ",", sys.argv[2], sys.argv[3])
@@ -50,6 +50,6 @@ while i<13:                                                                 ##lo
 FormattedString=finalString.replace('},{','\n').replace(',{','').replace('}','').replace(',"temp":','\t').replace('"date":','') ##Removing Characters which dont matter. Also, Formatting the text output.
 
 filename=City+" "+Year+".txt"
-file=open(filename, "w+")
+file=open(filename, "w+")                                                   #File Operations
 file.write(FormattedString)
 file.close()
