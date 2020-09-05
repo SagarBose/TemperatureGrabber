@@ -43,7 +43,7 @@ while i<13:                                                                 ##lo
     #print(URL)
     print("Extracting Temperature Data for month", i, Year)
     soup = bs(requests.get(URL).text,'lxml')                                #convert URL to Beautiful Soup Object
-    match = soup.find_all('script', type="text/javascript")[3].text.strip() #fourth data value in the Beautiful Soup Object
+    match = soup.find_all('script', type="text/javascript")[1].text.strip() #fourth data value in the Beautiful Soup Object
     finalString=finalString+','+re.findall('(?<=\[).+?(?=\])',match)[0]     #regex to find everything between the first [] brackets
     i += 1
 
